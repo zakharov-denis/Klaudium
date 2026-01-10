@@ -1,0 +1,58 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/*.py",
+      "**/__pycache__/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/about",
+        "destination": "/about/page.html"
+      },
+      {
+        "source": "/contact",
+        "destination": "/contact/page.html"
+      },
+      {
+        "source": "/blog",
+        "destination": "/blog/page.html"
+      },
+      {
+        "source": "/coursedemo",
+        "destination": "/coursedemo/page.html"
+      },
+      {
+        "source": "/privacy",
+        "destination": "/privacy-page/page.html"
+      },
+      {
+        "source": "/terms",
+        "destination": "/terms-of-use/page.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(js|css|html|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      }
+    ]
+  }
+}
+
