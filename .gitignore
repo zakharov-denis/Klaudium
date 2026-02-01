@@ -1,0 +1,20 @@
+# System Files
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node (General)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python (General)
+__pycache__/
+*.py[cod]
+.venv/
+env/
