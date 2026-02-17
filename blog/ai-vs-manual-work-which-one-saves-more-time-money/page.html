@@ -11,8 +11,8 @@
     
     <meta name="viewport" content="width=device-width">
     <meta name="generator" content="Framer af7f236">
-    <title>VIBE FOUNDING STUDIO</title>
-    <meta name="description" content="Xtract is a modern AI automation agency Framer template, perfect for AI startups and tech businesses. It’s sleek, responsive, SEO-friendly, and designed to showcase AI solutions with a clean layout, smooth animations, and a conversion-focused approach." />
+    <title>Klaudium</title>
+    <meta name="description" content="We design and code your entire web app from zero using our modern VIBE workflow. Every logic block, every component, every interaction is built intentionally." />
     <meta name="framer-search-index" content="https://framerusercontent.com/sites/64IKENZNArO7SPmNsDiT00/searchIndex-8CW1EvnL3FBw.json">
     <meta name="framer-search-index-fallback" content="https://framerusercontent.com/sites/64IKENZNArO7SPmNsDiT00/searchIndex-2zxZuSvV4ADn.json">
     <link href="https://framerusercontent.com/images/j5lXnL5djhR8orvNcpRh6LSncY.png" rel="icon" media="(prefers-color-scheme: light)">
@@ -20,13 +20,13 @@
     <link rel="apple-touch-icon" href="https://framerusercontent.com/images/NXjUGkhb1Qk6O8iTyi1xHE7w.png"/>
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content="VIBE FOUNDING STUDIO">
-    <meta property="og:description" content="Xtract is a modern AI automation agency Framer template, perfect for AI startups and tech businesses. It’s sleek, responsive, SEO-friendly, and designed to showcase AI solutions with a clean layout, smooth animations, and a conversion-focused approach.">
+    <meta property="og:title" content="Klaudium">
+    <meta property="og:description" content="We design and code your entire web app from zero using our modern VIBE workflow. Every logic block, every component, every interaction is built intentionally.">
     <meta property="og:image" content="https://framerusercontent.com/images/HMAXl2OBQIIUUaPBbnSBuo5EQYE.png">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="VIBE FOUNDING STUDIO">
-    <meta name="twitter:description" content="Xtract is a modern AI automation agency Framer template, perfect for AI startups and tech businesses. It’s sleek, responsive, SEO-friendly, and designed to showcase AI solutions with a clean layout, smooth animations, and a conversion-focused approach.">
+    <meta name="twitter:title" content="Klaudium">
+    <meta name="twitter:description" content="We design and code your entire web app from zero using our modern VIBE workflow. Every logic block, every component, every interaction is built intentionally.">
     <meta name="twitter:image" content="https://framerusercontent.com/images/HMAXl2OBQIIUUaPBbnSBuo5EQYE.png">
     <style data-framer-css-ssr>
         html, body, #main {
@@ -673,5 +673,38 @@ if (typeof window !== "undefined") {
 
 
     
+<script>
+(function() {
+  function rebrand() {
+    if (document.title.includes('VIBE FOUNDING')) {
+      document.title = document.title.replace(/VIBE FOUNDING STDIO/g, 'Klaudium Studio').replace(/VIBE FOUNDING STUDIO/g, 'Klaudium Studio').replace(/VIBE FOUNDING/g, 'Klaudium Studio');
+    }
+    document.querySelectorAll('meta[content*="VIBE FOUNDING"]').forEach(function(el) {
+      el.setAttribute('content', el.getAttribute('content').replace(/VIBE FOUNDING STDIO/g, 'Klaudium Studio').replace(/VIBE FOUNDING STUDIO/g, 'Klaudium Studio').replace(/VIBE FOUNDING/g, 'Klaudium Studio'));
+    });
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    while (walker.nextNode()) {
+      var node = walker.currentNode;
+      if (node.nodeValue && node.nodeValue.includes('VIBE FOUNDING')) {
+        node.nodeValue = node.nodeValue.replace(/VIBE FOUNDING STDIO/g, 'Klaudium Studio').replace(/VIBE FOUNDING STUDIO/g, 'Klaudium Studio').replace(/VIBE FOUNDING/g, 'Klaudium Studio');
+      }
+    }
+  }
+  var observer = new MutationObserver(function() {
+    observer.disconnect();
+    rebrand();
+    observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+  });
+  function start() {
+    rebrand();
+    observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+  }
+  if (document.body) {
+    start();
+  } else {
+    document.addEventListener('DOMContentLoaded', start);
+  }
+})();
+</script>
 </body>
 </html>
